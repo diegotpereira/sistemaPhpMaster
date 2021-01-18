@@ -118,7 +118,7 @@
                        $nome_foto = date('dmy') .  '_' . $_FILES['foto']['name'];
 
                        //Função move_uploaded_file() copia e verifica se o arquivo enviado foi copiada com sucesso para o destino
-                       if(!move_uploaded_file($_FILES['foto'] ['tmp_nome'], 'foros/' .$nome_foto));
+                       if(!move_uploaded_file($_FILES['foto'] ['tmp_nome'], 'fotos/' .$nome_foto));
                            echo "Houve um erro ao gravar arquivo na pasta de destino";
                        endif;    
                   endif;
