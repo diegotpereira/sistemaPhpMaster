@@ -71,7 +71,7 @@ endif;
                         <td><?=$cliente->celular?></td>
                         <td><?=$cliente->status?></td>
                         <td>
-                            <a href='editar.php?id=<?$cliente->id?>' class="btn btn-primary">Editar</a>
+                            <a href='editar.php?id=<?=$cliente->id?>' class="btn btn-primary">Editar</a>
                             <a href='javascript:void(0)' class="btn btn-danger link_exclusao" rel="<?=$cliente->id?>">Excluir</a>
 
                         </td>
