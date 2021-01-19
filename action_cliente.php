@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-	<title>Sistema de Cadastro</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
+    <title>Sistema de Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
+
 <body>
-	<div class='container box-mensagem-crud'>
-		<?php 
+    <div class='container box-mensagem-crud'>
+        <?php 
 		require 'conexao.php';
 
 		// Atribui uma conexão PDO
@@ -242,6 +244,7 @@
 		endif;
 		?>
 
-	</div>
+    </div>
 </body>
+
 </html>

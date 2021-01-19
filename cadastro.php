@@ -67,7 +67,7 @@
 
                         <div class="form-group">
                             <label for="celular">Celular</label>
-                            <input type="celular" class="form-control" id="celular" maxlength="12" name="telefone"
+                            <input type="celular" class="form-control" id="celular" maxlength="12" name="celular"
                                 placeholder="Informe seu Telefone">
                             <span class='msg-erro msg-celular'></span>
                         </div>
