@@ -24,7 +24,7 @@
                             <label for="nome">Selecionar Foto</label>
                             <div class="col-md-2">
                                 <a href="#" class="thumbnail">
-                                    <img src="img/padrao.jpg" height="190" height="150" id="foto-cliente">
+                                    <img src="fotos/padrao.jpg" height="190" height="150" id="foto-cliente">
                                 </a>
                             </div>
                             <imput type="file" name="foto" id="foto" value="foto"></imput>
@@ -52,21 +52,17 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="data_nascimento" class="form-control" id="data_nascimento" maxlength="10"
-                                name="data_nascimento">
-                                <input type="data_nascimento" class="form-control" id="dta_nascimento" maxlength="10"
-                                    name="data_nascimento">
-                                <span class='msg-erro msg-dta'></span>
-                            </label>
+                            <label for="data_nascimento">Data de Nascimento</label>
+                            <input type="data_nascimento" class="form-control" id="data_nascimento" maxlength="10"
+                                name="data_nascimento" placeholder="Informe sua data de nascimento">
+                            <span class='msg-erro msg-data'></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="teloefone" class="form-control" id="telefone" name="telefone" maxlength="12"
-                                placeholder="Informe seu telefone">
-                                <input type="telefone" class="form-control" id="telefone" maxlength="12" name="telefone"
-                                    placeholder="informe seu Telefone">
-                                <span class='msg-erro msg-telefone'></span>
-                            </label>
+                            <label for="telefone">Telefone</label>
+                            <input type="telefone" class="form-control" id="telefone" maxlength="12" name="telefone"
+                                placeholder="Informe o Telefone">
+                            <span class='msg-erro msg-telefone'></span>
                         </div>
 
                         <div class="form-group">
