@@ -2,7 +2,7 @@
 
 define('SGBD', 'mysql');
 define('HOST', 'localhost');
-define('DBNAME', '');
+define('DBNAME', 'db_blog_master');
 define('CHARSET', 'utf8');
 define('USER', 'root');
 define('PASSWORD', 'root');
