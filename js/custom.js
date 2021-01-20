@@ -11,7 +11,8 @@ var inputCPF = document.getElementById("cpf");
 if (inputCPF != null && inputCPF.addEventListener) {
     inputCPF.addEventListener("keypress", function(){mascaraTexto(this, '###.###.###-##')});
 }else if (inputCPF != null && inputCPF.attachEvent) {
-    inputCPF.attachEvent("onkeypress", function(), function(){mascaraTexto(this, '###.###.###-##')})
+    inputCPF.attachEvent("onkeypress", function() {mascaraTexto(this, '###.###.###-##')})
+    
 }
 /* Evento keypress do input data de nascimento a função para formatar data (dd/mm/yyyy)*/
 var inputDataNascimento = document.getElementById("data_nascimento");
@@ -23,17 +24,18 @@ if (inputDataNascimento != null && inputDataNascimento.addEventListener) {
 /* Evento keypress do input data de nascimento a função para formatar telefone (00 0000-0000)*/
 var inputTelefone = document.getElementById("telefone");
 if (inputTelefone != null && inputTelefone.addEventListener) {
-    inputTelefone.addEventListener("keypress", function(){mascaraTexto(this, '## ####-#####')})
-}else if (inputTelefone != null && inputTelefone.attachEvent){
-    inputTelefone.attachEvent("onkeypress", function(){mascaraTexto(this, '## ####-####')})
+    inputTelefone.addEventListener("keypress", function () { mascaraTexto(this, '## ####-####') });
+} else if (inputTelefone != null && inputTelefone.attachEvent) {
+    inputTelefone.attachEvent("onkeypress", function () { mascaraTexto(this, '## ####-####') });
 }
 /* Evento keypress do input data de nascimento a função para formatar celular (00 0000-0000)*/
 var inputCelular = document.getElementById("celular");
 if (inputCelular != null && inputCelular.addEventListener) {
-    inputCelular.addEventListener ("keypress", function(){mascaraTexto(this, '## #####-#####')})
-}else if (inputCelular != nuill && inputCelular.attachEvent){
-    inputCelular.attachEvent("onkeypress", function(){mascaraTexto(this, '## ####-#####')})
+    inputCelular.addEventListener("keypress", function () { mascaraTexto(this, '## #####-####') });
+} else if (inputCelular != null && inputCelular.attachEvent) {
+    inputCelular.attachEvent("onkeypress", function () { mascaraTexto(this, '## #####-####') });
 }
+
 /* Evento change do input FILE para upload da foto*/
 var inputFile = document.getElementById("foto");
 var foto_cliente = document.getElementById("foto-cliente");
@@ -69,15 +71,14 @@ function validaCadastro(evt){
     var celular = document.getElementById('celular');
     var filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     var contErro = 0;
-}
+
 /* Validação do campo nome */
-caixa_nome = document.getElementById('.msg-nome');
-if (nome.value="") {
+caixa_nome = document.querySelector('.msg-nome');
+if (nome.value == "") {
     caixa_nome.innerHTML = "Favor preencher o Nome";
     caixa_nome.style.display = 'block';
     contErro += 1;
-
-}else{
+} else {
     caixa_nome.style.display = 'none';
 }
 /* Validação do campo email */
@@ -111,7 +112,8 @@ if (cpf.value =="") {
 }else{
     caixa_cpf.style.display = 'none';
 }
-/* Validação do campo telefone */caixa_telefone = document.querySelector('.msg-telefone');
+/* Validação do campo telefone */
+caixa_telefone = document.querySelector('.msg-telefone');
 if (telefone.value == "") {
     caixa_telefone.innerHTML = "Favor preencher o telefone";
     caixa_telefone.style.display = 'block';
@@ -139,14 +141,15 @@ if (status.value == "") {
 if (contErro > 0) {
     evt.preventDafault();
 }
+}
 
 /* Função para formatar dados conforme parâmetro enviado, CPF, DATA, TELEFONE e CELULAR */
-function mascaraTexto(t, masnk){
+function mascaraTexto(t, mask){
     var i = t.value.length;
     var saida = mask.substring(1,0);
     var texto = mask.substring(i);
-    if (texto.substring(0,1)) {
-        t.value += texto.substring(0,1);
+    if (texto.substring(0, 1) != saida) {
+        t.value += texto.substring(0, 1);
     }
 }
 /* Função para exibir a imagem selecionada no input file na tag <img>  */
